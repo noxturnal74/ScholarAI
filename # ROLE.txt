@@ -1,0 +1,465 @@
+# ROLE
+
+You are a senior full-stack software engineer, AI engineer, and UI/UX designer.
+
+Your task is to build a complete production-ready web application called:
+
+"ScholarAI - AI Scholarship & Global Opportunity Analyzer"
+
+The application helps students and young professionals analyze scholarships, conferences, youth summits, exchange programs, internships, grants, competitions, and other global opportunities from unstructured posts.
+
+The app does NOT automatically apply on behalf of the user. It only analyzes opportunities, provides eligibility assessment, and redirects users to official websites to submit applications manually.
+
+---
+
+# MAIN PROBLEM
+
+Many opportunities are shared through Instagram captions, LinkedIn posts, websites, Telegram messages, and PDF announcements.
+
+Problems:
+- Information is unstructured.
+- Users miss deadlines.
+- Users don't know whether they are eligible.
+- Users waste time applying to opportunities requiring application fees.
+- Users struggle to prioritize which opportunities are worth applying for.
+
+Build an AI-powered assistant that converts raw opportunity information into structured insights.
+
+---
+
+# TECH STACK
+
+Use modern free technologies.
+
+Frontend:
+- Next.js 15 App Router
+- TypeScript
+- Tailwind CSS
+- ShadCN UI
+- Glassmorphism design
+- Fully responsive
+- Dark/Light mode
+
+Backend:
+- Next.js Server Actions and API Routes
+
+Database:
+- PostgreSQL
+- Prisma ORM
+
+AI:
+- OpenAI API
+
+Deployment:
+- Frontend + Backend: Vercel
+- Database: Neon PostgreSQL
+
+Authentication:
+- Clerk Authentication
+
+---
+
+# DESIGN REQUIREMENTS
+
+Create a premium Apple-like design.
+
+Follow:
+- Apple Human Interface style
+- Minimalist layout
+- Smooth animations
+- Rounded cards
+- Glass effects
+- Beautiful gradients
+- Excellent typography
+- Mobile-first responsive design
+
+The interface should look like a premium productivity application.
+
+---
+
+# CORE FEATURES
+
+## 1. Dashboard
+
+Create a dashboard showing:
+
+- Total opportunities
+- Eligible opportunities
+- Expired opportunities
+- Urgent deadlines
+- Application progress
+
+Include:
+- Statistics cards
+- Charts
+- Recent analyzed opportunities
+- Upcoming deadlines timeline
+
+---
+
+## 2. User Profile
+
+Users can input:
+
+Personal Information:
+- Name
+- Nationality
+- Country of residence
+- Date of birth
+- Age
+- Gender (optional)
+
+Education:
+- Current degree
+- University
+- Major
+- GPA
+
+Languages:
+- IELTS score
+- TOEFL score
+- Other language certifications
+
+Experience:
+- Organization experience
+- Leadership
+- Competition achievements
+- Work experience
+- Volunteer experience
+
+Preferences:
+- Target countries
+- Opportunity types
+- Funding requirements
+- Maximum application fee
+
+---
+
+## 3. AI Opportunity Analyzer
+
+Provide a large text input.
+
+Users can paste:
+
+- Instagram captions
+- LinkedIn posts
+- Website announcements
+- PDF content
+- Email announcements
+
+Example:
+
+"FutureMinds Summit Thailand 2026...
+Fully funded...
+Deadline: 16 June 2026..."
+
+When the Analyze button is clicked, the AI must extract:
+
+Basic Information:
+- Opportunity name
+- Organizer
+- Category
+- Country
+- City
+- Event date
+- Deadline
+
+Financial Information:
+- Funding type
+- What is covered
+- Application fee
+
+Requirements:
+- Age limit
+- Nationality restrictions
+- Education requirements
+- Required documents
+- Language requirements
+
+Links:
+- Official website
+- Application URL
+- Contact information
+
+---
+
+## 4. AI Eligibility Matching
+
+Compare opportunity requirements with user profile.
+
+Generate:
+
+Match Score:
+0 - 100%
+
+Status:
+- Eligible
+- Potentially Eligible
+- Not Eligible
+- Unknown
+
+Provide explanations.
+
+Example:
+
+Match Score: 92%
+
+Reasons:
+✓ Indonesian applicants allowed
+✓ GPA requirement fulfilled
+✓ No application fee
+✓ Student status suitable
+
+Missing:
+- IELTS certificate
+
+---
+
+## 5. Smart Deadline Tracker
+
+Automatically classify:
+
+Expired:
+Deadline already passed.
+
+Urgent:
+Deadline less than 7 days.
+
+Upcoming:
+Deadline within 30 days.
+
+Future:
+Deadline more than 30 days away.
+
+Display:
+- Countdown timer
+- Calendar view
+- Deadline timeline
+
+---
+
+## 6. Opportunity Database
+
+Save every analyzed opportunity.
+
+Allow:
+
+Search:
+- Name
+- Country
+- Organization
+
+Filters:
+- Fully funded
+- Free application
+- Open only
+- Category
+- Match score
+
+Sorting:
+- Closest deadline
+- Highest match score
+- Newest analyzed
+
+---
+
+## 7. Priority Recommendation Engine
+
+Generate a ranked list:
+
+"Top Opportunities You Should Apply For"
+
+Ranking factors:
+
+40% Eligibility Match
+30% Funding Quality
+20% Deadline Priority
+10% User Preference
+
+Display:
+
+- Rank
+- Match score
+- Why recommended
+- Actions required
+
+---
+
+## 8. Application Tracker
+
+Users can mark:
+
+- Interested
+- Preparing Documents
+- Applied
+- Interview
+- Accepted
+- Rejected
+
+Store:
+- Application date
+- Notes
+- Documents submitted
+
+---
+
+## 9. AI Assistant
+
+Include a chatbot.
+
+Examples:
+
+"What documents should I prepare for MEXT?"
+
+"Find opportunities suitable for my profile."
+
+"Why am I not eligible for this conference?"
+
+The AI can access:
+- User profile
+- Opportunity database
+- Previous applications
+
+---
+
+## 10. Notifications
+
+Implement:
+
+In-app notifications:
+
+- Deadline tomorrow
+- Missing documents
+- New recommended opportunities
+
+---
+
+# DATABASE DESIGN
+
+Create proper Prisma models:
+
+Users
+Profiles
+Opportunities
+Requirements
+FundingDetails
+Documents
+Applications
+Notifications
+
+Include:
+- Relationships
+- Foreign keys
+- Indexes
+- Timestamps
+
+---
+
+# AI OUTPUT FORMAT
+
+Always use structured JSON schema.
+
+Example:
+
+{
+ "name": "",
+ "organization": "",
+ "type": "",
+ "location": "",
+ "deadline": "",
+ "funding": "",
+ "application_fee": "",
+ "requirements": [],
+ "documents": [],
+ "links": []
+}
+
+Validate malformed AI responses.
+
+---
+
+# SECURITY
+
+Implement:
+
+- Authentication
+- Authorization
+- Input validation
+- API rate limiting
+- Environment variables
+- Error handling
+- Secure database queries
+
+---
+
+# PERFORMANCE
+
+Implement:
+
+- Server-side rendering
+- Pagination
+- Caching
+- Optimized database queries
+- Lazy loading
+- Image optimization
+
+---
+
+# TESTING
+
+Create:
+
+- Unit tests
+- Component tests
+- API tests
+
+Use:
+- Jest
+- React Testing Library
+
+---
+
+# DOCUMENTATION
+
+Generate:
+
+README.md containing:
+
+- Project overview
+- Problem statement
+- Features
+- Architecture diagram
+- Technology stack
+- Installation guide
+- Environment variables
+- Database migration steps
+- Deployment instructions
+- Screenshots placeholders
+
+---
+
+# FINAL REQUIREMENTS
+
+The project must be:
+
+- Production-ready
+- Clean architecture
+- Scalable
+- Maintainable
+- Fully typed with TypeScript
+- Following best practices
+- No placeholder implementations
+- No TODO comments
+- No unfinished features
+
+Generate the project in a complete folder structure.
+
+After every major feature is finished:
+1. Run the application locally.
+2. Fix all errors.
+3. Ensure lint and type checking pass.
+4. Update README with the implemented feature.
+5. Commit changes with meaningful Git commit messages.
+
+Continue working until the application is fully complete.
+Do not stop after creating the initial boilerplate.
