@@ -31,17 +31,17 @@ export default function HomePage() {
             {
               title: 'Smart Matching',
               description: 'AI-powered algorithm matches you with scholarships you qualify for',
-              icon: '??',
+              icon: '\u{1F3AF}',
             },
             {
               title: 'Automated Tracking',
               description: 'Track all your applications in one organized dashboard',
-              icon: '??',
+              icon: '\u{1F4CA}',
             },
             {
               title: 'Essay Assistant',
               description: 'AI-powered suggestions to improve your scholarship essays',
-              icon: '??',
+              icon: '\u{270D}\u{FE0F}',
             },
           ].map((feature, i) => (
             <Card key={i} className="glass hover:shadow-xl transition-shadow">
@@ -83,7 +83,7 @@ export default function HomePage() {
         <Card className="glass max-w-lg mx-auto border border-primary/10">
           <CardHeader className="text-center pb-2">
             <CardTitle className="text-lg flex items-center justify-center gap-2">
-              Dukung Pengembangan Platform ??
+              Dukung Pengembangan Platform {"\u{1F496}"}
             </CardTitle>
             <CardDescription className="text-xs">
               Bantu kami menjaga server tetap berjalan gratis untuk seluruh mahasiswa Indonesia.
