@@ -1,14 +1,14 @@
-# ?? ScholarAI - AI-Powered Scholarship Management
+# 🎓 ScholarAI - AI-Powered Scholarship Management
 
 ScholarAI is a premium, Apple-inspired full-stack web application designed to help students and young professionals discover, track, and analyze scholarships, youth summits, fellowships, and global opportunities from unstructured text posts.
 
-## ?? Live Application & Repository
+## 🚀 Live Application & Repository
 - **GitHub Repository**: [https://github.com/noxturnal74/ScholarAI](https://github.com/noxturnal74/ScholarAI)
-- **Live Local Tunnel (HTTPS)**: [https://e84e72477e2748.lhr.life](https://e84e72477e2748.lhr.life)
+- **Live Local Tunnel (HTTPS)**: [https://efacce6822ef71.lhr.life](https://efacce6822ef71.lhr.life)
 
 ---
 
-## ?? Key Implemented Features
+## 🌟 Key Implemented Features
 
 ### 1. Dynamic Overview Dashboard
 - Displays dynamic statistics: Total Opportunities, Active Applications, Pending Review, and Accepted Applications.
@@ -34,14 +34,14 @@ ScholarAI is a premium, Apple-inspired full-stack web application designed to he
 
 ---
 
-## ??? Technology Stack
+## 🛠️ Technology Stack
 - **Frontend**: Next.js 15 App Router (running in optimized Next.js 16 build mode), TypeScript, Tailwind CSS v4, Lucide Icons, ShadCN UI.
 - **Backend**: Next.js Server Actions.
 - **Database**: Neon PostgreSQL cloud server via Prisma ORM (v6.4.0).
 
 ---
 
-## ?? Local Installation & Setup
+## 💻 Local Installation & Setup
 
 ### Prerequisites
 - Node.js 20+
@@ -88,7 +88,7 @@ ScholarAI is a premium, Apple-inspired full-stack web application designed to he
 
 ---
 
-## ?? Production Deployment on Vercel
+## ☁️ Production Deployment on Vercel
 
 To host this project on Vercel:
 1. Log in to your [Vercel Dashboard](https://vercel.com/dashboard) and connect your GitHub account.
