@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Target, BarChart3, PenTool, Heart, Sparkles } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -10,8 +11,8 @@ export default function HomePage() {
       <section className="container mx-auto px-4 py-24 text-center max-w-4xl relative">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
         
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-semibold mb-6 animate-pulse">
-          <span>?</span> Powered by Advanced AI Matching
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-semibold mb-6">
+          <Sparkles className="h-3.5 w-3.5 text-primary" /> Powered by Advanced AI Matching
         </div>
         
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[1.1] text-foreground">
@@ -44,35 +45,38 @@ export default function HomePage() {
             {
               title: 'Smart Matching',
               description: 'AI-powered algorithm matches you with scholarships you qualify for.',
-              icon: '\u{1F3AF}',
+              icon: Target,
               color: 'from-blue-500 to-cyan-500'
             },
             {
               title: 'Automated Tracking',
               description: 'Track all your applications in one organized dashboard.',
-              icon: '\u{1F4CA}',
+              icon: BarChart3,
               color: 'from-indigo-500 to-purple-500'
             },
             {
               title: 'Essay Assistant',
               description: 'AI-powered suggestions to improve your scholarship essays.',
-              icon: '\u{270D}\u{FE0F}',
+              icon: PenTool,
               color: 'from-violet-500 to-fuchsia-500'
             },
-          ].map((feature, i) => (
-            <Card key={i} className="glass hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-3xl border border-white/10 shadow-sm relative overflow-hidden group">
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.color}`} />
-              <CardContent className="pt-8">
-                <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:scale-110 transition-transform">
-                  {feature.icon}
-                </div>
-                <CardTitle className="text-lg font-bold mb-2">{feature.title}</CardTitle>
-                <CardDescription className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+          ].map((feature, i) => {
+            const Icon = feature.icon;
+            return (
+              <Card key={i} className="glass hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-3xl border border-white/10 shadow-sm relative overflow-hidden group">
+                <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${feature.color}`} />
+                <CardContent className="pt-8">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg font-bold mb-2">{feature.title}</CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
@@ -102,7 +106,9 @@ export default function HomePage() {
       {/* Support / Credit Card Section */}
       <section className="container mx-auto px-4 py-16 max-w-lg">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold tracking-tight">Support Our Platform {"\u{1F496}"}</h2>
+          <h2 className="text-2xl font-bold tracking-tight flex items-center justify-center gap-2">
+            Support Our Platform <Heart className="h-6 w-6 text-destructive fill-destructive" />
+          </h2>
           <p className="text-xs text-muted-foreground mt-1">Help keep this platform free for all Indonesian students</p>
         </div>
         
@@ -131,7 +137,7 @@ export default function HomePage() {
                 <p className="text-[9px] text-zinc-500 tracking-widest uppercase">Card Holder</p>
                 <p className="text-sm font-semibold tracking-wide text-zinc-200">Albert William Saputra</p>
               </div>
-              <span className="text-lg">????</span>
+              <span className="text-xs font-bold text-zinc-400">IDN</span>
             </div>
           </div>
         </div>

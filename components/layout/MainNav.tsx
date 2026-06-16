@@ -4,13 +4,14 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/layout/ThemeToggle'
+import { GraduationCap } from 'lucide-react'
 
 export function MainNav() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="font-bold text-xl flex items-center gap-2">
-          <span className="text-primary">🎓</span>
+          <GraduationCap className="h-6 w-6 text-primary" />
           <span>ScholarAI</span>
         </Link>
 
