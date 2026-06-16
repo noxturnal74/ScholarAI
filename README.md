@@ -4,7 +4,7 @@ ScholarAI is a premium, Apple-inspired full-stack web application designed to he
 
 ## 🚀 Live Application & Repository
 - **GitHub Repository**: [https://github.com/noxturnal74/ScholarAI](https://github.com/noxturnal74/ScholarAI)
-- **Live Local Tunnel (HTTPS)**: [https://e86056e8fd20ca.lhr.life](https://e86056e8fd20ca.lhr.life)
+- **Live Local Tunnel (HTTPS)**: [https://56725a3097fffc.lhr.life](https://56725a3097fffc.lhr.life)
 
 ---
 
