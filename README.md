@@ -4,7 +4,7 @@ ScholarAI is a premium, Apple-inspired full-stack web application designed to he
 
 ## 🚀 Live Application & Repository
 - **GitHub Repository**: [https://github.com/noxturnal74/ScholarAI](https://github.com/noxturnal74/ScholarAI)
-- **Live Local Tunnel (HTTPS)**: [https://enhancement-volleyball-dealer-programme.trycloudflare.com](https://enhancement-volleyball-dealer-programme.trycloudflare.com)
+- **Live Production Deployment**: [https://scholar-ai-seven-pi.vercel.app](https://scholar-ai-seven-pi.vercel.app)
 
 ---
 
