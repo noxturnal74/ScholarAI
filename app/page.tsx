@@ -77,6 +77,30 @@ export default function HomePage() {
         </Card>
       </section>
 
+      
+      {/* Support Section */}
+      <section className="container mx-auto px-4 py-12">
+        <Card className="glass max-w-lg mx-auto border border-primary/10">
+          <CardHeader className="text-center pb-2">
+            <CardTitle className="text-lg flex items-center justify-center gap-2">
+              Dukung Pengembangan Platform ??
+            </CardTitle>
+            <CardDescription className="text-xs">
+              Bantu kami menjaga server tetap berjalan gratis untuk seluruh mahasiswa Indonesia.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-center space-y-3">
+            <p className="text-xs text-muted-foreground">
+              Dukungan operasional/donasi dapat ditransfer melalui:
+            </p>
+            <div className="bg-primary/5 p-3 rounded-lg border border-primary/10 inline-block font-mono text-sm">
+              <p className="font-bold text-primary">BCA: 4480784567</p>
+              <p className="text-xs text-muted-foreground mt-0.5">a.n. Albert William Saputra</p>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <Card className="glass overflow-hidden">
